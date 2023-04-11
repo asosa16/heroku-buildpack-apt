@@ -15,9 +15,8 @@ make
 make install
 
 # Set environment variables
-echo "-----> Setting environment variables"
-echo "LD_LIBRARY_PATH=/app/.apt/usr/lib:\$LD_LIBRARY_PATH" >> /app/.profile.d/zbar.sh
-echo "CPPFLAGS=-I/app/.apt/usr/include:\$CPPFLAGS" >> /app/.profile.d/zbar.sh
-echo "LDFLAGS=-L/app/.apt/usr/lib:\$LDFLAGS" >> /app/.profile.d/zbar.sh
-echo "PKG_CONFIG_PATH=/app/.apt/usr/lib/pkgconfig:\$PKG_CONFIG_PATH" >> /app/.profile.d/zbar.sh
+export LD_LIBRARY_PATH="/app/.apt/usr/lib:$LD_LIBRARY_PATH"
+export CPPFLAGS="-I/app/.apt/usr/include:$CPPFLAGS"
+export LDFLAGS="-L/app/.apt/usr/lib:$LDFLAGS"
+export PKG_CONFIG_PATH="/app/.apt/usr/lib/pkgconfig:$PKG_CONFIG_PATH"
 
